@@ -21,8 +21,10 @@ function findLongestWord(words) {
     }
     const wordsLengthsMax = Math.max(...wordsLengths);
     const wordsLengthIndex = wordsLengths.indexOf(wordsLengthsMax);
+    //console.log(wordsLengthIndex);
+    //console.log(words[wordsLengthIndex]);
     return words[wordsLengthIndex];
-    console.log(words[wordsLengthIndex]);
+
   } else {
     return null;
   }
