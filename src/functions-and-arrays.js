@@ -33,10 +33,10 @@ function findLongestWord(words) {
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-function sumNumbers(numbers) { 
-  let sumNumbers=0;
+function sumNumbers(numbers) {
+  let sumNumbers = 0;
   for (let i = 0; i < numbers.length; i++) {
-     sumNumbers += numbers[i];
+    sumNumbers += numbers[i];
   }
   return sumNumbers;
 }
@@ -45,8 +45,29 @@ function sumNumbers(numbers) {
 
 
 // Iteration #3.1 Bonus:
-
-function sum() { }
+const mixedArr = [6, 12, 'miami', 1, true, 'barca', '200', 'lisboa', 8, 10];
+//const mixedArr = [6, 12, 'miami', 1, 'barca', '200', 'lisboa', 8, [], {}];
+function sum(mixedArr) {
+  let sumNumbers = 0;
+  for (let i = 0; i < mixedArr.length; i++) {
+    let mixedEl = typeof mixedArr[i];
+    if ( mixedEl === "number") {
+      sumNumbers += mixedArr[i];
+    } else if ( mixedEl === "string"){
+      sumNumbers += mixedArr[i].length;
+    } else if ( mixedEl === "boolean"){
+      if ((mixedArr[i]) === false) { // false is counted as 0
+        sumNumbers += 0;
+      } else { // true is counted as 1
+        sumNumbers += 1;
+      }
+    } else if ( ((mixedEl) === "object") || ((mixedEl) === "array" )) {
+       return "Unsupported data type sir or ma'am";
+    }
+  }
+  return sumNumbers;
+}
+//console.log(sum(mixedArr)); // 57 yuju!
 
 
 
