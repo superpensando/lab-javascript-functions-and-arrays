@@ -1,31 +1,45 @@
 // Iteration #1: Find the maximum
 
 function maxOfTwoNumbers(num1, num2) {
-  if ((num1 > num2) || (num1 == num2)){
+  if ((num1 > num2) || (num1 == num2)) {
     return num1;
-  } else  {
+  } else {
     return num2;
-  } 
+  }
 }
-
+//console.log(maxOfTwoNumbers(2.879, 2.999));
 
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+//const words = [];
+function findLongestWord(words) {
+  if (words.length > 0) {
+    let wordsLengths = [];
+    for (let i = 0; i < words.length; i++) {
+      wordsLengths.push(words[i].length);
+    }
+    const wordsLengthsMax = Math.max(...wordsLengths);
+    const wordsLengthIndex = wordsLengths.indexOf(wordsLengthsMax);
+    return words[wordsLengthIndex];
+    console.log(words[wordsLengthIndex]);
+  } else {
+    return null;
+  }
 
-function findLongestWord() {}
-
+}
+//console.log(findLongestWord(words));
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers() { }
 
 
 
 // Iteration #3.1 Bonus:
-function sum() {}
+function sum() { }
 
 
 
@@ -33,7 +47,7 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers() { }
 
 
 // Level 2: Array of strings
@@ -42,7 +56,7 @@ const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smar
 function averageWordLength() { }
 
 // Bonus - Iteration #4.1
-function avg() {}
+function avg() { }
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -59,14 +73,14 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray() { }
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist() { }
 
 
 
@@ -85,7 +99,7 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes() { }
 
 
 
@@ -113,7 +127,7 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct() { }
 
 
 
