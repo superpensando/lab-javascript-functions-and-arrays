@@ -228,8 +228,59 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() { }
 
+
+function greatestProduct(matrix) { 
+    // Matrix 20 * 20
+    const matrixLengthX = matrix.length;
+    const matrixLengthY = matrixLengthX;
+
+    let productMatrixLTR = [];
+    let productMatrixRTL = [];
+    let productMatrixDiagonalLTR = [];
+ 
+    let productMatrixTTB = [];
+    let productMatrixBTT = [];
+    let productMatrixDiagonalRTL= [];
+  
+    let productMatrixMax = [];
+
+    // X axis
+    for (let i= 0; i< matrixLengthX -3 ; i++ ){
+          for (let j=0; j< matrixLengthY -3 ; j++) {
+
+            productMatrixLTR.push( matrix[i][j] * matrix[i][j+1] * matrix[i][j+2] * matrix[i][j+3]);                //  →
+            productMatrixTTB.push( matrix[i][j] * matrix[i+1][j] * matrix[i+2][j] * matrix[i+3][j]);                //  ↓
+            productMatrixDiagonalLTR.push( matrix[i][j] * matrix[i+1][j+1] * matrix[i+2][j+2] * matrix[i+3][j+3]);  //  ↘
+
+          }
+    }
+
+    // Y axis
+    for (let i = 3; i< matrixLengthX; i++ ){
+        for (let j= 3; j< matrixLengthY; j++) {
+
+          productMatrixRTL.push( matrix[i][j] * matrix[i][j-1] * matrix[i][j-2] * matrix[i][j-3]);                // ←
+          productMatrixBTT.push( matrix[i][j] * matrix[i-1][j] * matrix[i-2][j] * matrix[i-3][j]);                // ↑
+          productMatrixDiagonalRTL.push( matrix[i][j] * matrix[i-1][j-1] * matrix[i-2][j-2] * matrix[i-3][j-3]);  // ↖
+
+        }
+        
+    }
+
+    productMatrixMax.push(Math.max(...productMatrixLTR));        
+    productMatrixMax.push(Math.max(...productMatrixTTB));         
+    productMatrixMax.push(Math.max(...productMatrixDiagonalLTR)); 
+    productMatrixMax.push(Math.max(...productMatrixRTL)); 
+    productMatrixMax.push(Math.max(...productMatrixBTT));
+    productMatrixMax.push(Math.max(...productMatrixDiagonalRTL));  
+
+    //console.log(productMatrixMax);
+    let finalProductMatrixMax = Math.max(...productMatrixMax);
+    return finalProductMatrixMax;
+
+}
+//console.log(greatestProduct(matrix)); //==> 51267216
 
 
 
