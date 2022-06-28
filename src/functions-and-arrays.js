@@ -112,7 +112,7 @@ function avg(mixedArr) {
     return null;
   } 
 }
-console.log(avg(mixedArr)); //==> 5.7 yuju!
+//console.log(avg(mixedArr)); //==> 5.7 yuju!
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
