@@ -67,21 +67,41 @@ function sum(mixedArr) {
   }
   return sumNumbers;
 }
-//console.log(sum(mixedArr)); // 57 yuju!
+//console.log(sum(mixedArr)); //==> 57 yuju!
 
 
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+//const numbersAvg = [];
+function averageNumbers(numbersAvg) { 
+  const numbersAvgLength = numbersAvg.length;
+  if ( numbersAvgLength > 0 ) {
+    const numbersAvgSum = sum(numbersAvg);
+    return numbersAvgSum/numbersAvgLength;
+  } else {
+    return null;
+  } 
 
-function averageNumbers() { }
+}
+//console.log(averageNumbers(numbersAvg)); //==> 6
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
-
-function averageWordLength() { }
+//const wordsArr = [];
+function averageWordLength(wordsArr) { 
+  const wordsArrLength =  wordsArr.length;
+  if (wordsArrLength > 0 ) {
+    const wordsArrSum = sum(wordsArr);
+    console.log(wordsArrSum);
+    return wordsArrSum / wordsArrLength;
+  } else {
+    return null;
+  } 
+}
+console.log(averageWordLength(wordsArr)); //==> 5.3
 
 // Bonus - Iteration #4.1
 function avg() { }
