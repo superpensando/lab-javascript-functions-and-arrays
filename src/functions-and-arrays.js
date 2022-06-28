@@ -183,8 +183,24 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+let wordSearch2="matter";
 
-function howManyTimes() { }
+function howManyTimes(wordsCount,wordSearch2) {
+  const wordsCountLength = wordsCount.length;
+  if (wordsCountLength > 0 ) {
+    let count = 0; 
+    for (let i = 0; i < wordsCountLength ; i++) {
+       if (wordsCount[i] === wordSearch2) {
+         count ++;
+       }
+    }
+    return count; 
+    
+  } else {
+    return 0; 
+  }
+ }
+ //console.log(howManyTimes(wordsCount,wordSearch2));
 
 
 
