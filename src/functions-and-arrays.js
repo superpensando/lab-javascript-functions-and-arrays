@@ -95,16 +95,24 @@ function averageWordLength(wordsArr) {
   const wordsArrLength =  wordsArr.length;
   if (wordsArrLength > 0 ) {
     const wordsArrSum = sum(wordsArr);
-    console.log(wordsArrSum);
     return wordsArrSum / wordsArrLength;
   } else {
     return null;
   } 
 }
-console.log(averageWordLength(wordsArr)); //==> 5.3
+//console.log(averageWordLength(wordsArr)); //==> 5.3
 
 // Bonus - Iteration #4.1
-function avg() { }
+function avg(mixedArr) { 
+  const mixedArrLength =  mixedArr.length;
+  if (mixedArrLength > 0 ) {
+    const mixedArrSum = sum(mixedArr);
+    return mixedArrSum / mixedArrLength;
+  } else {
+    return null;
+  } 
+}
+console.log(avg(mixedArr)); //==> 5.7 yuju!
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
