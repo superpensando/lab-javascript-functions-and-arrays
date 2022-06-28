@@ -129,8 +129,22 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() { }
-
+function uniquifyArray(wordsUnique) { 
+  const wordsUniqueLength = wordsUnique.length;
+  if (wordsUniqueLength > 0 ) {
+    let uniquifyArray = [];
+    for (let i = 0; i < wordsUniqueLength ; i++) {
+        //indexOf returns -1 if dont' exists in array
+        if (uniquifyArray.indexOf(wordsUnique[i]) === -1 ) {
+            uniquifyArray.push(wordsUnique[i]); //If the word exists, dont' push in the new array. 
+        }
+    }
+    return uniquifyArray;
+  } else {
+    return null; 
+  }
+}
+console.log(uniquifyArray(wordsUnique));
 
 
 // Iteration #6: Find elements
