@@ -144,13 +144,28 @@ function uniquifyArray(wordsUnique) {
     return null; 
   }
 }
-console.log(uniquifyArray(wordsUnique));
+//console.log(uniquifyArray(wordsUnique));
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+let wordSearch = "starting";
+//let wordSearch = "laura";
 
-function doesWordExist() { }
+function doesWordExist(wordsFind,wordSearch) { 
+  const wordsFindLength = wordsFind.length;
+  if (wordsFindLength > 0) {
+    if (wordsFind.includes(wordSearch)) {
+      return true;
+    } else {
+      return false; 
+    }
+  } else {
+    return null;
+  }
+  
+}
+//console.log(doesWordExist(wordsFind,wordSearch));
 
 
 
